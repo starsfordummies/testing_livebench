@@ -9,7 +9,6 @@ phi = random_mps(ss, linkdims=100)
 
 return inner(psi,phi)
 
-
 suite = BenchmarkGroup()
 
 suite["fib"] = BenchmarkGroup(["tag1", "tag2"])
