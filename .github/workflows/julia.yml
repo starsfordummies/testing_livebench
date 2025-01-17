@@ -44,7 +44,7 @@ jobs:
           julia --project --color=yes -e '
             using Pkg;
             Pkg.instantiate();
-            include("test1.jl")'
+            include("test2.jl")'
 
       - name: Store benchmark result
         uses: benchmark-action/github-action-benchmark@v1
