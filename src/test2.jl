@@ -9,11 +9,10 @@ function over_lap(L)
 
     psi = apply(o, psi)
     phi = random_mps(ss, linkdims=100)
+    println("applied")
 
     return inner(psi,phi)
 end
-
-
 
 
 suite = BenchmarkGroup()
