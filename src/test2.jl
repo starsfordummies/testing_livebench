@@ -7,7 +7,7 @@ function over_lap(L)
     psi = random_mps(ss, linkdims=100)
     o = random_mpo(ss) + random_mpo(ss)
 
-    psi = apply(o, psi)
+    psi = apply(o, psi, alg="naive")
     phi = random_mps(ss, linkdims=100)
     println("applied")
 
