@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737109281941,
+  "lastUpdate": 1737109553348,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -180,6 +180,42 @@ window.BENCHMARK_DATA = {
             "value": 318828870.5,
             "unit": "ns",
             "extra": "gctime=8485484\nmemory=344866432\nallocs=158807\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "70697517+starsfordummies@users.noreply.github.com",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ba617faacf79a5f8e9bc8369c6181dddab207a4b",
+          "message": "fix it back",
+          "timestamp": "2025-01-17T11:22:52+01:00",
+          "tree_id": "27e42d8d669165aeb4eb2a210e7de42c5a5ad0b9",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/ba617faacf79a5f8e9bc8369c6181dddab207a4b"
+        },
+        "date": 1737109552562,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "ITensors <phi|O|psi>/L=10, chi=100",
+            "value": 14312263,
+            "unit": "ns",
+            "extra": "gctime=1405868\nmemory=28226896\nallocs=54867\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "ITensors <phi|O|psi>/L=20, chi=100",
+            "value": 128772374,
+            "unit": "ns",
+            "extra": "gctime=6090756\nmemory=194788448\nallocs=118161\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
