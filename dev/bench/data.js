@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737109031529,
+  "lastUpdate": 1737109281941,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -144,6 +144,42 @@ window.BENCHMARK_DATA = {
             "value": 132044784,
             "unit": "ns",
             "extra": "gctime=5512807\nmemory=194788448\nallocs=118161\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "70697517+starsfordummies@users.noreply.github.com",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "87713ee469b7fe61ac87d2c0660ec160814ac559",
+          "message": "should be bad",
+          "timestamp": "2025-01-17T11:18:21+01:00",
+          "tree_id": "88b1ae91ea168cde35d8d31d3d6edc0b2c66c6cb",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/87713ee469b7fe61ac87d2c0660ec160814ac559"
+        },
+        "date": 1737109281093,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "ITensors <phi|O|psi>/L=10, chi=100",
+            "value": 19361860,
+            "unit": "ns",
+            "extra": "gctime=1865615\nmemory=42874624\nallocs=73823\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "ITensors <phi|O|psi>/L=20, chi=100",
+            "value": 318828870.5,
+            "unit": "ns",
+            "extra": "gctime=8485484\nmemory=344866432\nallocs=158807\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
