@@ -5,7 +5,7 @@ function over_lap(L)
     ss = siteinds("S=1/2", L)
 
     psi = random_mps(ss, linkdims=100)
-    o = random_mpo(ss) + random_mpo(ss) + random_mpo(ss)
+    o = random_mpo(ss) + random_mpo(ss) 
 
     psi = apply(o, psi, alg="naive")
     phi = random_mps(ss, linkdims=100)
