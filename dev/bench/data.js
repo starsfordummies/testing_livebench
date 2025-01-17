@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737107872664,
+  "lastUpdate": 1737109031529,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -108,6 +108,42 @@ window.BENCHMARK_DATA = {
             "value": 129454930,
             "unit": "ns",
             "extra": "gctime=5000574\nmemory=194789216\nallocs=118165\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "70697517+starsfordummies@users.noreply.github.com",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "89b64864808d2befe795e84815f4dc608d7129ae",
+          "message": "wish i knew what i'm doing",
+          "timestamp": "2025-01-17T11:14:07+01:00",
+          "tree_id": "e768b3411844ae5dc981d59652ceb6ab9b289782",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/89b64864808d2befe795e84815f4dc608d7129ae"
+        },
+        "date": 1737109031118,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "ITensors <phi|O|psi>/L=10, chi=100",
+            "value": 16110402,
+            "unit": "ns",
+            "extra": "gctime=1866397\nmemory=28226896\nallocs=54867\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "ITensors <phi|O|psi>/L=20, chi=100",
+            "value": 132044784,
+            "unit": "ns",
+            "extra": "gctime=5512807\nmemory=194788448\nallocs=118161\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
