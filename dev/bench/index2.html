@@ -192,6 +192,8 @@
           }));
         }
 
+
+
         function renderAllChars(dataSets) {
 
           function renderGraph(parent, name, dataset) {
@@ -238,7 +240,7 @@
               borderColor: color,
               fill: false,
             };
-              datasets.push(lineData);
+            datasets.push(lineData);
 
               
               // datasets: [
@@ -311,7 +313,6 @@
               data,
               options,
             });
-          }
 
           function renderBenchSet(name, benchSet, main) {
             const setElem = document.createElement('div');
