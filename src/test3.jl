@@ -25,8 +25,8 @@ suite = BenchmarkGroup()
 
 suite[bench_root1] = BenchmarkGroup(["ITensors", "overlaps"])
 
-suite[bench_root1][bench_sub1] = @benchmarkable over_lap(10)
-suite[bench_root1][bench_sub2] = @benchmarkable over_lap(20)
+suite[bench_root1][bench_sub1]["lib1"]["aa"] = @benchmarkable over_lap(10)
+suite[bench_root1][bench_sub2]["lib1"]["aa"] = @benchmarkable over_lap(20)
 
 tune!(suite)
 results1 = run(suite, verbose = true)
@@ -38,8 +38,8 @@ suite = BenchmarkGroup()
 
 suite[bench_root1] = BenchmarkGroup(["ITensors", "overlaps"])
 
-suite[bench_root1][bench_sub1] = @benchmarkable over_lap(8)
-suite[bench_root1][bench_sub2] = @benchmarkable over_lap(18)
+suite[bench_root1][bench_sub1]["lib2"]["aa"] = @benchmarkable over_lap(8)
+suite[bench_root1][bench_sub2]["lib2"]["aa"] = @benchmarkable over_lap(18)
 
 tune!(suite)
 
@@ -47,11 +47,8 @@ results2 = run(suite, verbose = true)
 
 r2 = median(results2)
 
-#for resu in [r1,r2]
+r_tog = deepcopy(r1)
 
-
-
-RESULTS[bench_root1][bench_sub1]["one"]["aa"] = r1
-RESULTS[bench_root1][bench_sub1]["two"]["aa"] = r2
+r_tog[bench_root1][bench_sub2]["lib2"]["aa"] = r2[bench_root1][bench_sub2]["lib2"]["aa"] 
 
 BenchmarkTools.save("output.json", RESULTS)
