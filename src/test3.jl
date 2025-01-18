@@ -49,6 +49,7 @@ r2 = median(results2)
 
 r_tog = deepcopy(r1)
 
+r_tog[bench_root1][bench_sub1]["lib2"]["aa"] = r2[bench_root1][bench_sub2]["lib2"]["aa"] 
 r_tog[bench_root1][bench_sub2]["lib2"]["aa"] = r2[bench_root1][bench_sub2]["lib2"]["aa"] 
 
-BenchmarkTools.save("output.json", RESULTS)
+BenchmarkTools.save("output.json", r_tog)
