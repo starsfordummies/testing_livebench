@@ -1,36 +1,57 @@
 using BenchmarkTools
 
-const BACKENDS = ["CPU", "CUDA"]
+using ITensors, ITensorMPS
 
-const CPU_Results = joinpath(dirname(@__FILE__), "results", "CPUbenchmarks.json")
-@assert(ispath(CPU_Results))
+const BACKENDS = ["Library1", "Library2"]
 
-const RESULTS = BenchmarkTools.load(CPU_Results)[1]
-@assert RESULTS isa BenchmarkTools.BenchmarkGroup
 
-for backend in BACKENDS[2:end]
-    @info "Aggregating results for $(backend)"
-    filename = string(backend, "benchmarks.json")
-    filepath = joinpath(dirname(@__FILE__), "results", filename)
-    if !ispath(filepath)
-        @warn "No file found at path: $(filepath)"
-    else
-        backend_results = BenchmarkTools.load(filepath)[1]
-        if backend_results isa BenchmarkTools.BenchmarkGroup
-            # <benchmark name>/<forward or reverse>/<backend>/<reactant or package>
-            for benchmark in keys(RESULTS)
-                for pass in keys(RESULTS[benchmark])
-                    for pkg in keys(backend_results[benchmark][pass][backend])
-                        RESULTS[benchmark][pass][backend][pkg] = backend_results[benchmark][pass][backend][pkg]
-                    end
-                end
-            end
-        else
-            @warn "Unexpected file format for file at path: $(filepath)"
-        end
-    end
+function over_lap(L)
+    ss = siteinds("S=1/2", L)
+
+    psi = random_mps(ss, linkdims=100)
+    o = random_mpo(ss) + random_mpo(ss) 
+
+    psi = apply(o, psi, alg="naive")
+    phi = random_mps(ss, linkdims=100)
+
+    return inner(psi,phi)
 end
 
-BenchmarkTools.save(
-    joinpath(dirname(@__FILE__), "results", "combinedbenchmarks.json"), RESULTS
-)
+bench_root1 = "ITensors <phi|O|psi>"
+bench_sub1 = "L=10, chi=100"
+bench_sub2 = "L=20, chi=100"
+
+suite = BenchmarkGroup()
+
+suite[bench_root1] = BenchmarkGroup(["ITensors", "overlaps"])
+
+suite[bench_root1][bench_sub1] = @benchmarkable over_lap(10)
+suite[bench_root1][bench_sub2] = @benchmarkable over_lap(20)
+
+tune!(suite)
+results1 = run(suite, verbose = true)
+
+r1 = median(results1)
+
+
+suite = BenchmarkGroup()
+
+suite[bench_root1] = BenchmarkGroup(["ITensors", "overlaps"])
+
+suite[bench_root1][bench_sub1] = @benchmarkable over_lap(8)
+suite[bench_root1][bench_sub2] = @benchmarkable over_lap(18)
+
+tune!(suite)
+
+results2 = run(suite, verbose = true)
+
+r2 = median(results2)
+
+#for resu in [r1,r2]
+
+
+
+RESULTS[bench_root1][bench_sub1]["one"]["aa"] = r1
+RESULTS[bench_root1][bench_sub1]["two"]["aa"] = r2
+
+BenchmarkTools.save("output.json", RESULTS)
