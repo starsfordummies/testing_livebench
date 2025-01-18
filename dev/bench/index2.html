@@ -174,6 +174,7 @@
               optionLink.href =
                 window.location.href.split("?")[0] + "?option=" + option;
             }
+          }
 
           // Render footer
           document.getElementById('dl-button').onclick = () => {
@@ -209,36 +210,34 @@
               datasets,
             };
 
-
-
-              const lineData = {
-                label: 'this is stefanos test label',
-                data: dataset.map((d) => {
-                  switch (pageOption) {
-                    case "memory":
-                      return (
-                        Number(
-                          d.bench.extra
-                            .split("\n")
-                            .find((val) => val.split("=")[0] === "memory")
-                            ?.split("=")[1]
-                        ) / 1e6
-                      );
-                    case "allocations":
-                      return Number(
+            const lineData = {
+              label: 'this is stefanos test label',
+              data: dataset.map((d) => {
+                switch (pageOption) {
+                  case "memory":
+                    return (
+                      Number(
                         d.bench.extra
                           .split("\n")
-                          .find((val) => val.split("=")[0] === "allocs")
+                          .find((val) => val.split("=")[0] === "memory")
                           ?.split("=")[1]
-                      );
-                    case "time":
-                    default:
-                      return d.bench.value / 1e6;
-                  }
-                }),
-                borderColor: color,
-                fill: false,
-              };
+                      ) / 1e6
+                    );
+                  case "allocations":
+                    return Number(
+                      d.bench.extra
+                        .split("\n")
+                        .find((val) => val.split("=")[0] === "allocs")
+                        ?.split("=")[1]
+                    );
+                  case "time":
+                  default:
+                    return d.bench.value / 1e6;
+                }
+              }),
+              borderColor: color,
+              fill: false,
+            };
               datasets.push(lineData);
 
               
