@@ -18,6 +18,8 @@ function over_lap(L)
 end
 
 bench_1 = "ITensors <phi|O|psi>"
+bench_sub1 = "L=10"
+bench_sub2 = "L=20"
 
 suite = BenchmarkGroup()
 
