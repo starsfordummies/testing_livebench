@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737305484847,
+  "lastUpdate": 1737319560591,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -96,6 +96,54 @@ window.BENCHMARK_DATA = {
             "value": 22231166,
             "unit": "ns",
             "extra": "gctime=0\nmemory=12633624\nallocs=254286\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "distinct": true,
+          "id": "a182557d149c1c13f05d63e464a557dd77fa62ea",
+          "message": "alg for iten,2",
+          "timestamp": "2025-01-19T21:40:59+01:00",
+          "tree_id": "921ad70e013186de60839ce20cbbc3c1994335b6",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/a182557d149c1c13f05d63e464a557dd77fa62ea"
+        },
+        "date": 1737319560113,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "<phi|O|psi>/L=20/aa/Library1",
+            "value": 16097694,
+            "unit": "ns",
+            "extra": "gctime=1789229\nmemory=25949424\nallocs=56783\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "<phi|O|psi>/L=20/aa/Library2",
+            "value": 87299099.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=58643896\nallocs=1153056\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "<phi|O|psi>/L=10/aa/Library1",
+            "value": 5294543,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=9133776\nallocs=26397\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "<phi|O|psi>/L=10/aa/Library2",
+            "value": 23455808,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=12693064\nallocs=255595\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
