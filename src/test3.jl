@@ -14,7 +14,7 @@ function overlap_iten(L)
     o = random_mpo(ss) 
 
     #psi = apply(o, psi, alg="naive")
-    psi = apply(o, psi, alg="zipup")
+    psi = apply(o, psi)
 
     return inner(psi,phi)
 end
