@@ -49,7 +49,7 @@ r2 = median(results2)
 r_tog = deepcopy(r1)
 
 
-r_tog[bench_root1][bench_sub1]["aa"]["Library2"] = r2[bench_root1][bench_sub2]["aa"]["Library2"] 
+r_tog[bench_root1][bench_sub1]["aa"]["Library2"] = r2[bench_root1][bench_sub1]["aa"]["Library2"] 
 r_tog[bench_root1][bench_sub2]["aa"]["Library2"] = r2[bench_root1][bench_sub2]["aa"]["Library2"] 
 
 
