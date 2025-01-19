@@ -11,7 +11,6 @@ function overlap_iten(L)
 
     psi = random_mps(ss, linkdims=30)
     phi = random_mps(ss, linkdims=50)
-    
     o = random_mpo(ss) 
 
     psi = apply(o, psi, alg="naive")
@@ -23,9 +22,9 @@ function overlap_tenet(L)
 
     psi = rand(Tenet.MPS, n=L, maxdim=30)
     phi = rand(Tenet.MPS, n=L, maxdim=50)
-    
     o = rand(Tenet.MPO, n=L, maxdim=1)
 
+    psic = copy(psi)
     evolve!(psi, o)
 
     return overlap(psi,phi)
