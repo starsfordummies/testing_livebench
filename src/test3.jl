@@ -25,8 +25,8 @@ suite = BenchmarkGroup()
 
 suite[bench_1] = BenchmarkGroup(["ITensors", "overlaps"])
 
-suite[bench_1][bench_sub1]["aa"]["Library1"] = @benchmarkable over_lap(10)
-suite[bench_1][bench_sub2]["aa"]["Library1"] = @benchmarkable over_lap(20)
+suite[bench_1][bench_sub1]["aa"]["Library1"] = @benchmarkable over_lap(11)
+suite[bench_1][bench_sub2]["aa"]["Library1"] = @benchmarkable over_lap(19)
 
 tune!(suite)
 results1 = run(suite, verbose = true)
@@ -38,8 +38,8 @@ suite = BenchmarkGroup()
 
 suite[bench_1] = BenchmarkGroup(["ITensors", "overlaps"])
 
-suite[bench_1][bench_sub1]["aa"]["Library2"] = @benchmarkable over_lap(10)
-suite[bench_1][bench_sub2]["aa"]["Library2"] = @benchmarkable over_lap(18)
+suite[bench_1][bench_sub1]["aa"]["Library2"] = @benchmarkable over_lap(9)
+suite[bench_1][bench_sub2]["aa"]["Library2"] = @benchmarkable over_lap(16)
 
 
 tune!(suite)
