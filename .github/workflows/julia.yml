@@ -43,7 +43,9 @@ jobs:
           cd src
           julia --project --color=yes -e '
             using Pkg;
-            Pkg.Registry.add(url = "https://github.com/bsc-quantic/Registry");
+            #Pkg.Registry.add(url = "https://github.com/bsc-quantic/Registry");
+            pkg"registry add https://github.com/bsc-quantic/Registry.git"
+            pkg"registry add General"
             Pkg.instantiate();
             include("test3.jl")'
 
