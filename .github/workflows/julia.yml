@@ -44,6 +44,7 @@ jobs:
           julia --project --color=yes -e '
             using Pkg;
             Pkg.instantiate();
+            Pkg.Registry.add("https://github.com/bsc-quantic/Registry")
             include("test3.jl")'
 
       - name: Store benchmark result
