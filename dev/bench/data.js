@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737361348336,
+  "lastUpdate": 1737380385745,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -240,6 +240,42 @@ window.BENCHMARK_DATA = {
             "value": 24449808,
             "unit": "ns",
             "extra": "gctime=0\nmemory=12512168\nallocs=251172\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "distinct": true,
+          "id": "2f09a61fca8f12b3254e8e6ef45d75f902829303",
+          "message": "t erge branch 'main' of github.com:starsfordummies/testing_livebench",
+          "timestamp": "2025-01-20T14:35:39+01:00",
+          "tree_id": "d4324cef625ff7aa45ff528dc097b102de2982fa",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/2f09a61fca8f12b3254e8e6ef45d75f902829303"
+        },
+        "date": 1737380385319,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "<phi|O|psi>/L=20/x/Tenet",
+            "value": 94991045.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=58975736\nallocs=1161976\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "<phi|O|psi>/L=10/x/Tenet",
+            "value": 23523767,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=12580632\nallocs=253092\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
