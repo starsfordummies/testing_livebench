@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737380385745,
+  "lastUpdate": 1737380527051,
   "repoUrl": "https://github.com/starsfordummies/testing_livebench",
   "entries": {
     "Julia benchmark result": [
@@ -276,6 +276,42 @@ window.BENCHMARK_DATA = {
             "value": 23523767,
             "unit": "ns",
             "extra": "gctime=0\nmemory=12580632\nallocs=253092\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "committer": {
+            "email": "stefano.carignano@fqa.ub.edu",
+            "name": "Stefano Carignano",
+            "username": "starsfordummies"
+          },
+          "distinct": true,
+          "id": "1805a94899c2a1bcea007573dbf055186dc18e0f",
+          "message": "comment out",
+          "timestamp": "2025-01-20T14:38:28+01:00",
+          "tree_id": "1da0aed2cce6d96fecbd142bedbb02ae10f1daf8",
+          "url": "https://github.com/starsfordummies/testing_livebench/commit/1805a94899c2a1bcea007573dbf055186dc18e0f"
+        },
+        "date": 1737380526146,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "<phi|O|psi>/L=20/x/Tenet",
+            "value": 90800721.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=58709576\nallocs=1156110\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "<phi|O|psi>/L=10/x/Tenet",
+            "value": 22186640,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=12425896\nallocs=249488\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":5,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
         ]
       }
