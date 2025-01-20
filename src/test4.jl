@@ -8,7 +8,7 @@ function overlap_tenet(L)
     phi = rand(Tenet.MPS, n=L, maxdim=50)
     o = rand(Tenet.MPO, n=L, maxdim=1)
 
-    psic = copy(psi)
+    #psic = copy(psi)
     evolve!(psi, o)
 
     return overlap(psi,phi)
