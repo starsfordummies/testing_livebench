@@ -13,8 +13,8 @@ function overlap_iten(L)
     phi = random_mps(ss, linkdims=50)
     o = random_mpo(ss) 
 
-    #psi = apply(o, psi, alg="naive")
-    psi = apply(o, psi)
+    psi = apply(o, psi, alg="naive")
+    #psi = apply(o, psi)
 
     return inner(psi,phi)
 end
