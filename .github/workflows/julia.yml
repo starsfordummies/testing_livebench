@@ -48,7 +48,7 @@ jobs:
             pkg"registry add General";
             Pkg.instantiate();
             pkg"add Tenet#master";
-            include("test3.jl")'
+            include("test4.jl")'
 
       - name: Store benchmark result
         uses: benchmark-action/github-action-benchmark@v1
